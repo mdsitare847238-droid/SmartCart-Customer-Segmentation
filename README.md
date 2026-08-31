@@ -160,7 +160,7 @@ SmartCart-Customer-Segmentation/
 ├── smartcart_customers.csv
 └── README.md
 
-## Conclusion
+##  Conclusion
 
 The SmartCart Customer Segmentation project uses K-Means clustering to identify different customer groups based on their characteristics and purchasing behaviour.
 
