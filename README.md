@@ -1,141 +1,77 @@
-# SmartCart-Customer-Segmentation
-# 🛒 SmartCart Clustering System
+# SmartCart Customer Segmentation
 
-## 📌 Problem Statement
+## Project Overview
 
-SmartCart is a growing e-commerce platform serving customers across multiple countries. The company has collected customer data containing **2,240 customer records and 22 attributes**, including customer demographics, purchase behaviour, website activity, and customer response.
+SmartCart Customer Segmentation is a machine learning project that uses customer data to identify different groups of customers based on their purchasing behaviour and characteristics.
 
-Currently, SmartCart uses generic marketing and engagement strategies for all customers without clearly understanding different customer behaviour patterns.
+The dataset contains 2,240 customer records. The project performs data preprocessing, feature engineering, outlier handling, encoding, scaling, PCA, and customer clustering.
 
-This can result in inefficient marketing, missed opportunities to retain high-value customers, and delayed identification of churn-prone users.
+## Dataset
 
-To solve this problem, SmartCart aims to build an **intelligent customer segmentation system using unsupervised machine learning**.
+The dataset contains customer information such as:
 
-The system analyses customers based on:
-
-- Purchasing behaviour
-- Engagement levels
-- Loyalty indicators
-
-The objective is to group customers into meaningful clusters and discover hidden patterns in customer behaviour.
-
----
-
-## 🎯 Project Objective
-
-The main objective of this project is to develop a **customer segmentation system using clustering algorithms**.
-
-The system identifies different customer groups based on their behaviour and characteristics.
-
----
-
-## 📊 Dataset
-
-The dataset contains **2,240 customer records and 22 attributes**.
-
-The dataset includes:
-
-### Customer Demographics
-- ID
-- Year of Birth
 - Education
-- Marital Status
 - Income
-- Kidhome
-- Teenhome
-- Customer Joining Date
-
-### Purchase Behaviour
-- Wine spending
-- Fruit spending
-- Meat product spending
-- Fish product spending
-- Sweet product spending
-- Gold product spending
-
-### Purchase Frequency
-- Deal purchases
-- Web purchases
-- Catalog purchases
-- Store purchases
-- Website visits per month
-
-### Customer Feedback
 - Recency
+- Deal Purchases
+- Web Purchases
+- Catalog Purchases
+- Store Purchases
+- Web Visits per Month
 - Complaints
 - Response
 
----
+Additional features are created during preprocessing, including:
 
-## ⚙️ Data Preprocessing
+- Age
+- Customer Tenure
+- Total Spending
+- Total Children
+- Living With
 
-The following preprocessing steps were performed:
+## Data Preprocessing
 
-1. Missing values in the `Income` column were handled using the median.
-2. New features were created:
-   - Age
-   - Customer Tenure
-   - Total Spending
-   - Total Children
-3. Education categories were grouped into:
-   - Undergraduate
-   - Graduate
-   - Postgraduate
-4. Marital status was transformed into a `Living_With` feature.
-5. Unnecessary columns were removed.
-6. Outliers were analysed and handled.
-7. Categorical features were encoded.
-8. Numerical features were scaled for clustering.
+The following steps are performed in the project:
 
----
+1. Missing values are handled.
+2. New features are created from the existing data.
+3. Unnecessary columns are removed.
+4. Outliers are analysed and handled.
+5. Categorical variables are encoded.
+6. Numerical features are scaled.
+7. PCA is applied for dimensionality reduction.
 
-## 🔧 Feature Engineering
+## PCA
 
-The following new features were created:
+Principal Component Analysis (PCA) is used to reduce the dimensionality of the processed dataset.
 
-- **Age** – calculated from `Year_Birth`
-- **Customer_Tenure_Days** – calculated from customer joining date
-- **Total_Spending** – total amount spent across product categories
-- **Total_Children** – total number of children and teenagers
-- **Living_With** – simplified marital-status category
+The project uses PCA components to visualise the customer data, including a 3D projection using PCA1, PCA2, and PCA3.
 
----
+## K-Means Clustering
 
-## 📉 Dimensionality Reduction
+K-Means clustering is used to divide customers into different groups.
 
-**Principal Component Analysis (PCA)** was applied to the processed customer data.
+The Elbow Method and WCSS are used to determine the optimal number of clusters.
 
-Three principal components were used to visualise the customer data in a 3D space:
-
-- PCA1
-- PCA2
-- PCA3
-
----
-
-## 🤖 K-Means Clustering
-
-The project uses **K-Means clustering** for customer segmentation.
-
-The Elbow Method and WCSS were used to analyse the suitable number of clusters.
-
-The optimal number of clusters obtained was:
+The optimal value obtained in the project is:
 
 **Best K = 4**
 
-Therefore, customers were divided into **4 different clusters**.
+Therefore, the customers are segmented into 4 clusters.
 
----
+## Cluster Analysis
 
-## 📊 Cluster Analysis
+The resulting clusters are analysed to understand the differences between customer groups.
 
-After applying K-Means clustering, the customer groups can be analysed based on their characteristics and purchasing behaviour.
+The analysis helps identify patterns in:
 
-The clustering results help identify different patterns among SmartCart customers.
+- Customer spending
+- Income
+- Purchase behaviour
+- Customer engagement
+- Other customer characteristics
 
----
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - Pandas
@@ -143,27 +79,30 @@ The clustering results help identify different patterns among SmartCart customer
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- K-Means Clustering
+- K-Means
 - PCA
 - StandardScaler
 - One-Hot Encoding
 - KneeLocator
 
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```text
 SmartCart-Customer-Segmentation/
 │
 ├── smartcart.ipynb
-├── smartcart_customers.csv
 └── README.md
+````
 
-##  Conclusion
+## Conclusion
 
-The SmartCart Customer Segmentation project uses K-Means clustering to identify different customer groups based on their characteristics and purchasing behaviour.
+The SmartCart Customer Segmentation project uses K-Means clustering to identify different customer groups based on customer characteristics and purchasing behaviour.
 
-After data preprocessing, feature engineering, and PCA, the Elbow Method was used to determine the optimal number of clusters. The optimal value obtained was **K = 4**.
+After data preprocessing, feature engineering, outlier handling, scaling, and PCA, the Elbow Method was used to determine the optimal number of clusters.
+
+The optimal value obtained was **K = 4**, resulting in four customer segments.
 
 This segmentation helps in understanding customer behaviour and can support better customer targeting and marketing decisions.
+
+
+```
