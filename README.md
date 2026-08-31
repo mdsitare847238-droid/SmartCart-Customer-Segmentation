@@ -87,7 +87,7 @@ The analysis helps identify patterns in:
 
 ## Project Structure
 
-```text
+``text
 SmartCart-Customer-Segmentation/
 │
 ├── smartcart.ipynb
