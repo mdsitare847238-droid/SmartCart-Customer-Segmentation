@@ -94,15 +94,13 @@ SmartCart-Customer-Segmentation/
 └── README.md
 
 
-## Conclusion
+
+Conclusion
 
 The SmartCart Customer Segmentation project uses K-Means clustering to identify different customer groups based on customer characteristics and purchasing behaviour.
 
 After data preprocessing, feature engineering, outlier handling, scaling, and PCA, the Elbow Method was used to determine the optimal number of clusters.
 
-The optimal value obtained was **K = 4**, resulting in four customer segments.
+The optimal value obtained was K = 4, resulting in four customer segments.
 
 This segmentation helps in understanding customer behaviour and can support better customer targeting and marketing decisions.
-
-
-```
